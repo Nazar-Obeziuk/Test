@@ -4,14 +4,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ComponentsComponent } from './components/components.component';
-import { AngularCounterComponent } from './angular-counter/angular-counter.component';
+
+import { TaskChildComponent } from './lesson3/task-child/task-child.component';
+import { Lesson5Component } from './lesson5/lesson5.component';
+import { HomeComponent } from './lesson5/components/home/home.component';
+import { CenzorComponent } from './lesson5/components/works/cenzor/cenzor.component';
+import { UserlistComponent } from './lesson5/components/works/userlist/userlist.component';
+import { TasklistComponent } from './lesson5/components/works/tasklist/tasklist.component';
+import { WorksComponent } from './lesson5/components/works/works.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ComponentsComponent,
-    AngularCounterComponent
+    TaskChildComponent,
+    Lesson5Component,
+    HomeComponent,
+    CenzorComponent,
+    UserlistComponent,
+    TasklistComponent,
+    WorksComponent
   ],
   imports: [
     BrowserModule,

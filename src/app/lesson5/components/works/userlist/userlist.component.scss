@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 80px auto;
+}
+
+.wrapper {
+
+    &__fields {}
+
+    &__list {
+        height: 350px;
+    }
+}
+
+.fields__password, .fields__email, .fields__button {
+    margin-top: 22px;
+}
+
+.login {
+
+    &__text {
+        font-size: 16px;
+        color: rgb(83, 83, 83);
+        margin-bottom: 10px;
+
+    }
+
+    &__input {}
+}
+
+.password {
+
+    &__text {
+        font-size: 16px;
+        color: rgb(83, 83, 83);
+        margin-bottom: 10px;
+    }
+
+    &__input {}
+}
+
+.email {
+
+    &__text {
+        font-size: 16px;
+        color: rgb(83, 83, 83);
+        margin-bottom: 10px;
+    }
+
+    &__input {
+        margin-bottom: 6px;
+    }
+}
+
+.button {
+
+    &__item {
+        width: 120px;
+        height: 40px;
+        background: none;
+        border: 1.5px solid #00b700;
+        border-radius: 4px;
+        color: #00b700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        cursor: pointer;
+        transition: .6s;
+
+        &:hover {
+            background: #00b700;
+            border: none;
+            color: white;
+        }
+    }
+}
+
+.list {
+
+    &__menu {
+        width: 800px;
+        height: 58px;
+        display: flex;
+        align-items: center;
+        padding: 0 60px 0 20px;
+        border-top: 1px solid rgb(195, 195, 195);
+        border-bottom: 2px solid rgb(195, 195, 195);
+        margin-top: 18px;
+    }
+}
+
+.menu {
+
+    &__edit {
+        margin-left: 180px;
+    }
+
+    &__delete {
+        margin-left: 80px;
+    }
+}
+
+.menu__login, .menu__password, .menu__email {
+    margin-left: 64px;
+}
+
+.input__field {
+    width: 440px;
+    height: 40px;
+    border: 1px solid rgb(183, 183, 183);
+    border-radius: 4px;
+    padding-left: 10px;
+    outline-color: lightblue;
+    font-size: 16px;
+
+    &::placeholder {
+        font-size: 16px;
+    }
+}
+
+.list__users {
+    height: 280px;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.list__container {
+    width: 800px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+    border-top: 1px solid rgb(195, 195, 195);
+}
+
+.container__counter {
+    position: absolute;
+}
+
+.container__login {
+    position: absolute;
+    left: 95px;
+}
+
+.container__password {
+    position: absolute;
+    left: 205px;
+}
+
+.container__email {
+    position: absolute;
+    left: 350px;
+}
+
+.container__edit {
+    width: 60px;
+    height: 40px;
+    background: orange;
+    border: none;
+    border-radius: 4px;
+    color: black;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    left: 580px;
+}
+
+.container__delete {
+    width: 80px;
+    height: 40px;
+    background: rgb(188, 34, 34);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    left: 690px;
+}

@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular';
+
+  public words: string = '';
+
+  public inputValue!: string;
+
+  getValue(): void {
+    this.words += this.inputValue + ' ';
+    console.log(this.words);
+    this.inputValue = '';
+  }
+
 }
