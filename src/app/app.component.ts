@@ -7,14 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  public words: string = '';
-
-  public inputValue!: string;
-
-  getValue(): void {
-    this.words += this.inputValue + ' ';
-    console.log(this.words);
-    this.inputValue = '';
-  }
+  
 
 }

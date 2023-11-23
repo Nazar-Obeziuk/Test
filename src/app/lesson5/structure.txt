@@ -1,6 +1,0 @@
-components/
-    home.component
-    works/
-        cenzor.component
-        userlist.component
-        tasklist.component
