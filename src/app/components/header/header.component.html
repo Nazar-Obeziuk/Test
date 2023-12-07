@@ -1,3 +1,50 @@
+<!-- <div class="container">
+    <div class="block" (mouseover)="isHovered = false" (mouseout)="isHovered = true">
+        <img class="img" [ngClass]="{'hovered' : isHovered}" [src]="isHovered ? jpgImage : gifImage" alt="">
+    </div>
+</div> -->
+
 <div class="container">
-    <div class="block">Header works</div>
+    <div class="wrapper">
+        <div class="header">
+            <div class="header__button_wrapper" *ngIf="!switchMonthOrWeek">
+                <button (click)="toggleMonth(false)" type="button">PreviousM</button>
+                <button (click)="toggleMonth(true)" type="button">NextM</button>
+            </div>
+            <div class="header__button_wrapper" *ngIf="switchMonthOrWeek">
+              <button (click)="goToPreviousWeek()">Previous Week</button>
+              <button (click)="goToNextWeek()">Next Week</button>
+            </div>
+            <h2 >{{ formatDate(currentDate) }}</h2>
+            <div class="header__toggle_wrapper">
+                <button (click)="switchView('month')" type="button">Month</button>
+                <button (click)="switchView('week')" type="button">Week</button>
+            </div>
+        </div>
+        <div class="table" *ngIf="!switchMonthOrWeek">
+            <div class="table__header">
+                <div class="header__item table__item" *ngFor="let nameOfDay of nameOfWeek">
+                    <h3 class="header__item_text">{{ nameOfDay }}</h3>
+                </div>
+            </div>
+            <div class="table__main" >
+                <div class="main__table_item table__item" *ngFor="let day of daysOfWeek">
+                    <p class="main__table_text">{{ day.date | date }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="table" *ngIf="switchMonthOrWeek">
+          <div class="table__header">
+              <div class="header__item table__item" *ngFor="let nameOfDay of nameOfWeek">
+                  <h3 class="header__item_text">{{ nameOfDay }}</h3>
+              </div>
+          </div>
+          <div class="table__main" >
+              <div class="main__table_item table__item" *ngFor="let day of weekDays">
+                  <p class="main__table_text">{{ formatDay(day) }}</p>
+              </div>
+          </div>
+      </div>
+    </div>
 </div>
+
