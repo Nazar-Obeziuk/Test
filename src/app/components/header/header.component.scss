@@ -105,10 +105,25 @@
     }
 }
 
+.mini {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .block {
     width: 500px;
     height: 200px;
     background: red;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.box {
+    width: 500px;
+    height: 200px;
+    background: green;
     border-radius: 10px;
     text-align: center;
 }
